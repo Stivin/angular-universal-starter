@@ -3,11 +3,9 @@ import { MetaService } from '@ngx-meta/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: '<router-outlet></router-outlet>'
 })
 export class AppComponent {
-
   constructor(private readonly meta: MetaService) {
     this.meta.setTag('og:title', 'home ctor');
   }

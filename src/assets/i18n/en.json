@@ -1,26 +1,33 @@
 {
-  "loading": "Loading",
-  "sidebar": {
-    "home": "Home",
-    "mock": "Mock",
-    "back-http": "Back http"
+  "DEFAULTS": {
+    "APP_NAME": "Universal application",
+    "TITLE": "Default title",
+    "DESC": "Default description",
+    "SITE_NAME": "App site Universal"
   },
-  "home": {
-    "title": "Home page",
-    "text": "This is some text in English at home page"
+  "LOADING": "Loading",
+  "SIDEBAR": {
+    "HOME": "Home",
+    "MOCK": "Mock",
+    "BACK_HTTP": "Back http"
   },
-  "mock": {
-    "title": "Mock page",
-    "text": "This is some text in English at mock page"
+  "HOME": {
+    "TITLE": "Home page",
+    "DESC": "This is some text in English at home page"
   },
-  "back-http": {
-    "title": "Http request page",
-    "text": "This is some text in English at back http page",
-    "delay": "delay back get 3 sec:",
-    "post": "POST request:",
-    "original-url": "Origin URL:"
+  "MOCK": {
+    "TITLE": "Mock page",
+    "DESC": "This is some text in English at mock page"
   },
-  "not-found": {
-    "title": "Not Found"
+  "BACK_HTTP": {
+    "TITLE": "Http request page",
+    "DESC": "This is some text in English at back http page",
+    "DELAY": "delay back get 3 sec:",
+    "POST": "POST request:",
+    "ORIGINAL_URL": "Origin URL:"
+  },
+  "NOT_FOUND": {
+    "TITLE": "Not Found",
+    "DESC": "Page not found"
   }
 }

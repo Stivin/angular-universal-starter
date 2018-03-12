@@ -7,10 +7,10 @@ import { REQUEST } from '@nguniversal/express-engine';
 // shared
 import { CookieStorage } from '../forStorage/browser.storage';
 import { AppStorage } from '../forStorage/universal.inject';
+import { SharedTranslateBrowserModule } from '@shared/shared-translate/shared-translate-browser';
 // components
 import { AppComponent } from './app.component';
 import { AppModule } from './app.module';
-import { TranslatesBrowserModule } from '@shared/translates/translates-browser';
 
 // import { ServiceWorkerModule } from '@angular/service-worker';
 
@@ -27,7 +27,7 @@ export function getRequest(): any {
     BrowserTransferStateModule,
     // ServiceWorkerModule.register('/ngsw-worker.js'),
     AppModule,
-    TranslatesBrowserModule
+    SharedTranslateBrowserModule
   ],
   providers: [
     {

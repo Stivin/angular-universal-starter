@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { MetaLoader, MetaModule, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
+import { TranslateService } from '@ngx-translate/core';
 
-export function metaFactory(): MetaLoader {
+export function metaFactory(translate: TranslateService): MetaLoader {
   return new MetaStaticLoader({
-    callback: (key: string): string => key,
+    callback: (key: string) => translate.get(key),
     pageTitlePositioning: PageTitlePositioning.PrependPageTitle,
     pageTitleSeparator: ' | ',
-    applicationName: 'App Universal',
+    applicationName: 'DEFAULTS.APP_NAME',
     defaults: {
-      title: 'Default page title',
-      description: 'Default description',
-      'og:site_name': 'App site Universal',
+      title: 'DEFAULTS.TITLE',
+      description: 'DEFAULTS.DESC',
+      'og:site_name': 'DEFAULTS.SITE_NAME',
       'og:type': 'website',
       'og:locale': 'ru_RU',
       'og:locale:alternate': 'en_GB'
@@ -22,8 +23,8 @@ export function metaFactory(): MetaLoader {
   imports: [
     MetaModule.forRoot({
       provide: MetaLoader,
-      useFactory: metaFactory,
-      deps: []
+      useFactory: (metaFactory),
+      deps: [TranslateService]
     })
   ]
 })

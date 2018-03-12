@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TranslatesService, ITranslatesLanguage } from '@shared/translates';
+import { SharedTranslateService, ITranslatesLanguage } from '@shared/shared-translate';
 
 @Component({
   selector: 'app-toolbar',
@@ -10,15 +10,15 @@ export class ToolbarComponent implements OnInit {
   public languages: ITranslatesLanguage[];
   public currentLang: string;
 
-  constructor(private _translatesService: TranslatesService) {
+  constructor(private _translateService: SharedTranslateService) {
   }
 
   ngOnInit() {
-    this.languages = this._translatesService.getLanguages();
-    this.currentLang = this._translatesService.getCurrentLang();
+    this.languages = this._translateService.getLanguages();
+    this.currentLang = this._translateService.getCurrentLang();
   }
 
   public changeLang(lang: string): void {
-    this._translatesService.changeLang(lang);
+    this._translateService.changeLang(lang);
   }
 }
