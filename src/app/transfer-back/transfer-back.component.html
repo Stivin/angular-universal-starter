@@ -1,19 +1,19 @@
-<h1>{{ "back-http.title" | translate }}</h1>
-<p>{{ "back-http.text" | translate }}</p>
+<h1>{{ "BACK_HTTP.TITLE" | translate }}</h1>
+<p>{{ "BACK_HTTP.DESC" | translate }}</p>
 
 <hr>
 
-<strong>{{ "back-http.delay" | translate }}</strong>
+<strong>{{ "BACK_HTTP.DELAY" | translate }}</strong>
 <pre *ngIf="result; else noResult">
     {{ result | json }}
 </pre>
 <ng-template #noResult>
-    <p>{{ "loading" | translate }}...</p>
+    <p>{{ "LOADING" | translate }}...</p>
 </ng-template>
 <br/>
-<strong>{{ "back-http.post" | translate }}</strong>
+<strong>{{ "BACK_HTTP.POST" | translate }}</strong>
 <pre>
     {{ resultPost | json }}
 </pre>
 <br/>
-<strong>{{ "back-http.original-url" | translate }}</strong> {{ baseUrl }}
+<strong>{{ "BACK_HTTP.ORIGINAL_URL" | translate }}</strong> {{ baseUrl }}

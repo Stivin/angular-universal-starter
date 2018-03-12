@@ -1,24 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 const LINKS: any[] = [
-  { link: '/home', name: 'home', icon: 'home' },
-  { link: '/mock', name: 'mock', icon: 'info_outline' },
-  { link: '/back', name: 'back-http', icon: 'swap_vert' },
+  { url: '/home', name: 'HOME', icon: 'home' },
+  { url: '/mock', name: 'MOCK', icon: 'info_outline' },
+  { url: '/back', name: 'BACK_HTTP', icon: 'swap_vert' },
 ];
+const LINK_PREFIX: string = 'SIDEBAR.';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html'
 })
-export class SidebarComponent implements OnInit {
-  public links: any[] = [];
-
-  ngOnInit() {
-    // for remove sidebar.sidebar.sidebar.sidebar.sidebar.sidebar.sidebar.sidebar.sidebar.sidebar.sidebar.sidebar.sidebar.sidebar.home
-    const linkTemp = JSON.parse(JSON.stringify(LINKS));
-    this.links = linkTemp.map(link => {
-      link.name = `sidebar.${link.name}`;
-      return link;
-    });
-  }
+export class SidebarComponent {
+  public links: any[] = LINKS;
+  public linkPrefix: string = LINK_PREFIX;
 }

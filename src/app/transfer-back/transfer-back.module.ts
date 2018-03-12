@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+
+import { SharedModule } from '@shared/shared.module';
 
 import { TransferBackRoutes } from './transfer-back.routing';
 import { TransferBackComponent } from './transfer-back.component';
@@ -8,8 +9,8 @@ import { TransferBackComponent } from './transfer-back.component';
 @NgModule({
   imports: [
     CommonModule,
-    TransferBackRoutes,
-    TranslateModule.forChild()
+    SharedModule,
+    TransferBackRoutes
   ],
   declarations: [TransferBackComponent]
 })

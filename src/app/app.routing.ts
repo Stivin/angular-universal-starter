@@ -3,8 +3,10 @@ import { MetaGuard } from '@ngx-meta/core';
 
 import { WrapperComponent } from '@shared/layouts/wrapper/wrapper.component';
 
+const DEFAULT_REDIRECT: string = 'home';
+
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: DEFAULT_REDIRECT, pathMatch: 'full' },
   {
     path: '', component: WrapperComponent, canActivateChild: [MetaGuard], children: [
       { path: 'home', loadChildren: './home/home.module#HomeModule' },

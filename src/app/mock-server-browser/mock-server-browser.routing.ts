@@ -6,8 +6,8 @@ const routes: Routes = [
     path: '', component: MockServerBrowserComponent,
     data: {
       meta: {
-        title: 'Mock title',
-        description: 'Mock description'
+        title: 'MOCK.TITLE',
+        description: 'MOCK.DESC'
       }
     },
   },

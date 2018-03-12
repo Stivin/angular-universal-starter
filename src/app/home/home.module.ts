@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+
+import { SharedModule } from '@shared/shared.module';
 
 import { HomeRoutes } from './home.routing';
 import { HomeComponent } from './home.component';
@@ -8,9 +9,10 @@ import { HomeComponent } from './home.component';
 @NgModule({
   imports: [
     CommonModule,
-    HomeRoutes,
-    TranslateModule.forChild()
+    SharedModule,
+    HomeRoutes
   ],
   declarations: [HomeComponent]
 })
-export class HomeModule { }
+export class HomeModule {
+}

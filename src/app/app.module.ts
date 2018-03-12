@@ -9,6 +9,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { PrebootModule } from 'preboot';
 // shared
 import { TransferHttpModule } from '../modules/transfer-http/transfer-http.module';
+import { SharedMetaModule } from '@shared/shared-meta';
 import { SharedModule } from '@shared/shared.module';
 // components
 import { AppRoutes } from './app.routing';
@@ -23,6 +24,7 @@ import { AppComponent } from './app.component';
     AppRoutes,
     TransferHttpModule,
     BrowserAnimationsModule,
+    SharedMetaModule,
     SharedModule.forRoot(),
   ],
   declarations: [AppComponent],
